@@ -1,49 +1,43 @@
-#define TEMP_SENSOR A0
-#define RELAY_PIN 7
+// Solar Powered Cold Storage System
+// Arduino Nano
 
-const float TEMP_ON = 8.0;
-const float TEMP_OFF = 5.0;
+const int temperaturePin = A0;
+const int fanPin = 9;
 
-const int RELAY_ON = LOW;
-const int RELAY_OFF = HIGH;
+float temperature = 0;
 
-bool cooling = false;
+void setup()
+{
+  pinMode(fanPin, OUTPUT);
 
-void setup() {
   Serial.begin(9600);
 
-  pinMode(TEMP_SENSOR, INPUT);
-  pinMode(RELAY_PIN, OUTPUT);
-
-  digitalWrite(RELAY_PIN, RELAY_OFF);
-
-  Serial.println("Solar Cold Storage System Started");
+  digitalWrite(fanPin, LOW);
 }
 
-void loop() {
-  int sensorValue = analogRead(TEMP_SENSOR);
+void loop()
+{
+  int sensorValue = analogRead(temperaturePin);
 
   float voltage = sensorValue * (5.0 / 1023.0);
-  float temperature = voltage * 100.0;
+
+  // LM35 temperature calculation
+  temperature = voltage * 100.0;
 
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.println(" C");
 
-  if (temperature >= TEMP_ON) {
-    cooling = true;
+  // Cooling fan control
+  if (temperature >= 25)
+  {
+    digitalWrite(fanPin, HIGH);
+    Serial.println("Cooling Fan ON");
   }
-  else if (temperature <= TEMP_OFF) {
-    cooling = false;
-  }
-
-  if (cooling) {
-    digitalWrite(RELAY_PIN, RELAY_ON);
-    Serial.println("Cooling System ON");
-  }
-  else {
-    digitalWrite(RELAY_PIN, RELAY_OFF);
-    Serial.println("Cooling System OFF");
+  else
+  {
+    digitalWrite(fanPin, LOW);
+    Serial.println("Cooling Fan OFF");
   }
 
   delay(1000);
