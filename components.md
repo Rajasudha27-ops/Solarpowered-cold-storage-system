@@ -6,12 +6,8 @@
 | 2 | Solar Panel | 1 |
 | 3 | Rechargeable Battery | 1 |
 | 4 | Solar Charge Controller | 1 |
-| 5 | LM35 Sensor | 1 |
-| 6 | Relay Module | 1 |
+| 5 | Temperature Sensor | 1 |
 | 7 | DC Cooling System | 1 |
-| 8 | Insulated Box | 1 |
-| 9 | Connecting Wires | Required |
+| 8 | Connecting Wires | Required |
 
-## Software
-- Arduino IDE
-- Embedded C / Arduino C++
+
