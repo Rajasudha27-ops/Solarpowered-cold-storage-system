@@ -1,59 +1,36 @@
-# Solar Powered Cold Storage System ☀️❄️
+## Project: Solar Powered Cold Storage System
 
-## About the Project
-The Solar Powered Cold Storage System is an eco-friendly project that uses solar energy to maintain low temperatures for storing perishable products like fruits, vegetables, milk and other food items.
-
-Arduino Nano is used to monitor temperature through an LM35 sensor. When the temperature increases above the set limit, the cooling system automatically turns ON. When the temperature decreases, the cooling system turns OFF.
-
-## Objectives
-- Use renewable solar energy.
-- Monitor storage temperature automatically.
-- Control cooling using Arduino Nano.
-- Reduce electricity consumption.
-- Prevent food spoilage.
-
-## Components Required
+### Components Used
 1. Arduino Nano
 2. Solar Panel
-3. Rechargeable Battery
-4. Solar Charge Controller
-5. LM35 Temperature Sensor
-6. Relay Module
-7. DC Cooling System
-8. Insulated Storage Box
-9. Connecting Wires
+3. Temperature Sensor
+4. Pendant Box
+5. Cooling Fan
+6. Connecting Wires
 
-## Working Principle
-1. Solar panel generates electricity.
-2. Battery stores the generated energy.
-3. LM35 measures the storage temperature.
-4. Arduino Nano processes the temperature data.
-5. If temperature reaches 8°C, cooling turns ON.
-6. When temperature falls to 5°C, cooling turns OFF.
+### Working Principle
 
-## Applications
-- Fruit storage
-- Vegetable preservation
-- Milk storage
-- Agricultural cold storage
-- Rural food preservation
-
-## Advantages
-- Renewable energy usage
-- Automatic temperature control
-- Low electricity consumption
-- Environment-friendly
-- Useful in remote areas
-
+1. The solar panel generates electrical energy.
+2. The Arduino Nano receives power through a suitable power supply.
+3. The temperature sensor monitors the temperature inside the pendant box.
+4. Arduino Nano reads the temperature sensor values.
+5. The cooling fan helps circulate air inside the box.
+6. The system demonstrates a solar-powered temperature monitoring prototype
 ## Future Enhancements
 - LCD display
 - GSM alerts
 - IoT monitoring
 - Battery level monitoring
-- Temperature data logging
+- Temperature data logging 
 
-## Conclusion
-This project provides an eco-friendly approach to cold storage using solar energy and Arduino Nano. It helps monitor temperature and automatically control cooling.
+### Applications
+- Temperature monitoring
+- Food storage demonstration
+- Solar energy projects
+- Agricultural storage prototypes
 
-## Safety Note
-This is an educational prototype and requires a properly designed refrigeration system for actual food storage.
+### Conclusion
+This prototype demonstrates the use of solar
+energy, Arduino Nano, a temperature sensor and
+a cooling fan for temperature monitoring and
+air circulation.
